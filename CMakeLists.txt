@@ -57,6 +57,8 @@ set(BIN_INSTALL_DIR bin CACHE STRING
 set(CMAKE_INSTALL_DIR lib/cmake/folly CACHE STRING
     "The subdirectory where CMake package config files should be installed")
 
+set(CMAKE_EXE_LINKER_FLAGS "-fuse-ld=lld")
+
 option(BUILD_SHARED_LIBS
   "If enabled, build folly as a shared library.  \
   This is generally discouraged, since folly does not commit to having \

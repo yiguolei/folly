@@ -1742,7 +1742,7 @@ class F14Table : public Policy {
       }
     } catch (...) {
       reset();
-      F14LinkCheck<getF14IntrinsicsMode()>::check();
+      // F14LinkCheck<getF14IntrinsicsMode()>::check();
       throw;
     }
   }
@@ -1859,7 +1859,7 @@ class F14Table : public Policy {
         FOLLY_SAFE_DCHECK(
             origChunkCount < std::numeric_limits<InternalSizeType>::max(), "");
         chunkMask_ = static_cast<InternalSizeType>(origChunkCount - 1);
-        F14LinkCheck<getF14IntrinsicsMode()>::check();
+        // F14LinkCheck<getF14IntrinsicsMode()>::check();
       }
 
       this->afterRehash(

@@ -226,6 +226,8 @@ SSL_CTX* OpenSSLUtils::getSSLInitialCtx(SSL* ssl) {
 }
 
 BioMethodUniquePtr OpenSSLUtils::newSocketBioMethod() {
+  return nullptr;
+  /**
   BIO_METHOD* newmeth = nullptr;
 #if FOLLY_OPENSSL_IS_110
   if (!(newmeth = BIO_meth_new(BIO_TYPE_SOCKET, "socket_bio_method"))) {
@@ -248,6 +250,7 @@ BioMethodUniquePtr OpenSSLUtils::newSocketBioMethod() {
 #endif
 
   return BioMethodUniquePtr(newmeth);
+*/
 }
 
 bool OpenSSLUtils::setCustomBioReadMethod(
